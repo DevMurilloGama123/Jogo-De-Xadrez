@@ -1,19 +1,19 @@
 ﻿namespace tabuleiro
 {
-    internal class posicao
+    internal class Posicao
     {
-        public int Linha { get; set; }
-        public int Colunas { get; set; }
+        public int linhas { get; set; }
+        public int colunas { get; set; }
 
-         public posicao(int Linha, int Colunas)
+         public Posicao(int Linhas, int Colunas)
         {
-            this.Linha = Linha;
-            this.Colunas = Colunas;
+            this.linhas = Linhas;
+            this.colunas = Colunas;
         }
 
         public override string ToString()
         {
-            return Linha + ", " + Colunas;
+            return linhas + ", " + colunas;
         }
     }
 }

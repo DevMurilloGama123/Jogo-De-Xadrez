@@ -10,13 +10,11 @@ namespace xadrez_console
         {
             CultureInfo CI = CultureInfo.InvariantCulture;
 
-            posicao P;
+            Tabuleiro tab = new Tabuleiro(8, 8);
 
-            P = new posicao(3, 4);
+            Tela.imprimirTabuleiro(tab);
 
-            Console.WriteLine("Posição: " + P);
-
-            Console.WriteLine();
+            Console.ReadLine();    
         }
     }
 }
