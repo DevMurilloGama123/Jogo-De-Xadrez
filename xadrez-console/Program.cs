@@ -11,13 +11,24 @@ namespace xadrez_console
         {
             CultureInfo CI = CultureInfo.InvariantCulture;
 
-            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
+            try
+            {
+                Tabuleiro tab = new Tabuleiro(8, 8);
 
-            Console.WriteLine(pos);
+                tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+                tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
+                tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
 
-            Console.WriteLine(pos.toPosicao());
+                tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(3, 5));
 
-            Console.ReadLine();    
+                Tela.imprimirTabuleiro(tab);
+            }
+            catch (TabuleiroExeception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            Console.ReadLine();
         }
-    }
+    }    
 }
