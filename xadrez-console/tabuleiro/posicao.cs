@@ -5,10 +5,16 @@
         public int linhas { get; set; }
         public int colunas { get; set; }
 
-         public Posicao(int Linhas, int Colunas)
+         public Posicao(int Linha, int Coluna)
         {
-            this.linhas = Linhas;
-            this.colunas = Colunas;
+            this.linhas = Linha;
+            this.colunas = Coluna;
+        }
+
+        public void definirValores(int linha,  int coluna)
+        {
+            this.linhas = linha;
+            this.colunas = coluna;
         }
 
         public override string ToString()
