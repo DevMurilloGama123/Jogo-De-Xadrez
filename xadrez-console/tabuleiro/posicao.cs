@@ -14,7 +14,7 @@
         public void definirValores(int linha,  int coluna)
         {
             this.linhas = linha;
-            this.colunas = coluna;
+            this.colunas = coluna;  
         }
 
         public override string ToString()
